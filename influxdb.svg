@@ -21,7 +21,7 @@ text {
  fill:black;
  font-size:50px;
 }
-text.rate {
+text.metric {
  font-size:75px;
 }
 ]]></style>
@@ -32,21 +32,23 @@ text.rate {
    url="http://play.grafana.org/influxdb/db/graphite"
    username="grafana"
    password="grafana"
-   requestsPerSecond="1" 
+   requestsPerSecond="0.5" 
    />
 
-<g>
 <text x="225" y="75">USERS</text>
+
+<g>
 <line x1="300" y1="100" x2="300" y2="300" />
 <rect x="200" y="300" width="200" height="200" rx="20" ry="20" />
-<text x="425" y="350">WEBAPPXX</text>
-<text x="215" y="425" class="metric" series="apps.backend.backend_01.counters.requests.count"></text>
+<text x="425" y="350">WEBAPP</text>
+<text x="240" y="425" class="metric" series="apps.fakesite.web_server_01.counters.requests.count"></text>
 </g>
 
 <g transform="translate(0 500)">
 <line x1="300" y1="0" x2="300" y2="200" />
 <rect x="200" y="200" width="200" height="200" rx="20" ry="20" />
-<text x="425" y="250">BACKENDS</text>
+<text x="425" y="250">BACKEND</text>
+<text x="240" y="325" class="metric" series="apps.backend.backend_01.counters.requests.count"></text>
 </g>
 
 <script xlink:href="./poll.js"></script>
