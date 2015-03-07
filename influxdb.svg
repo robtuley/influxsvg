@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     xmlns:svg="http://www.w3.org/2000/svg" 
+	 xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="100%" height="100%" 
+	 viewBox="0 0 600 1000" >
+
+<style type="text/css"><![CDATA[  
+rect, path {  
+  fill:#DFF2BF;  
+  stroke:#4F8A10;  
+  stroke-width:1;
+  vector-effect:non-scaling-stroke; 
+}
+line {
+ stroke:black;
+ stroke-width:2;
+ vector-effect:non-scaling-stroke;
+}
+text {
+ fill:black;
+ font-size:50px;
+}
+text.rate {
+ font-size:75px;
+}
+]]></style>
+
+<title>Graphite SVG Example</title>
+
+<metadata id="influxsvg" 
+   url="http://play.grafana.org/influxdb/db/graphite"
+   username="grafana"
+   password="grafana"
+   requestsPerSecond="1" 
+   />
+
+<g>
+<text x="225" y="75">USERS</text>
+<line x1="300" y1="100" x2="300" y2="300" />
+<rect x="200" y="300" width="200" height="200" rx="20" ry="20" />
+<text x="425" y="350">WEBAPPXX</text>
+<text x="215" y="425" class="metric" series="apps.backend.backend_01.counters.requests.count"></text>
+</g>
+
+<g transform="translate(0 500)">
+<line x1="300" y1="0" x2="300" y2="200" />
+<rect x="200" y="200" width="200" height="200" rx="20" ry="20" />
+<text x="425" y="250">BACKENDS</text>
+</g>
+
+<script xlink:href="./poll.js"></script>
+</svg>
